@@ -1,0 +1,6 @@
+{
+    "ENDPOINT" : "https://garbagedeterminingchatbotcv.cognitiveservices.azure.com/",
+    "training_key" : "af248dbfd89245e4917afb7b8d05e1c6",
+    "prediction_key" : "87b29beab8ed4279b7414486497df02b",
+    "prediction_resource_id" : "/subscriptions/c45806d8-3790-4390-8cd4-150ad15382c6/resourceGroups/garbage-determining-chatbot/providers/Microsoft.CognitiveServices/accounts/garbagedeterminingchatbotcv-Prediction"
+}
