@@ -1,37 +1,40 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>チャットボット</title>
+    <title>エコーボット</title>
 </head>
 <body>
 <script src="https://riversun.github.io/chatux/chatux.min.js"></script>
 <script>
     const chatux = new ChatUx();
-    const initParam =
+
+    //ChatUXの初期化パラメータ
+ const initParam =
         {
             renderMode: 'auto',
             api: {
-                endpoint: 'http://localhost:5000/',
+                //echo chat server
+                endpoint: 'http://localhost:8080/chat',
                 method: 'GET',
                 dataType: 'jsonp'
             },
             bot: {
-                botPhoto: 'https://spcialpostappdevblob.blob.core.windows.net/fukushima-city/20211124094053433-%E3%83%86%E3%82%B9%E3%83%88%E7%94%A8.png',
+                botPhoto: 'https://spcialpostappdevblob.blob.core.windows.net/fukushima-city/20211124094053433-%E3%83%86%E3%82%B9%E3%83%88%E7%94%A8.png'
                 humanPhoto: null,
                 widget: {
                     sendLabel: '送信',
-                    placeHolder: '質問事項を入力してください。'
+                    placeHolder: '用件を入力してください'
                 }
             },
             window: {
-                title: 'お問い合わせ',
-                infoUrl: 'http://www.erestage.com/'
+                title: 'エコーボット',
+                infoUrl: 'https://github.com/riversun/chatux'
             }
         };
     chatux.init(initParam);
     chatux.start(true);
+
 </script>
 </body>
 </html>

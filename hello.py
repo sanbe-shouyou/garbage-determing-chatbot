@@ -1,4 +1,7 @@
-def greeting(name):
-    print("Hello,", name)
+import json
+default = open('config/default.json')
+defaultRead = json.load(default)
 
-greeting("World")
+ENDPOINT = defaultRead['ENDPOINT']
+training_key = "PASTE_YOUR_CUSTOM_VISION_TRAINING_SUBSCRIPTION_KEY_HERE"
+prediction_key = "PASTE_YOUR_CUSTOM_VISION_PREDICTION_SUBSCRIPTION_KEY_HERE"
