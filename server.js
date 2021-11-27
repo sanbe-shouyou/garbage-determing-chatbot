@@ -21,7 +21,8 @@ app.get('/chat', function (req, res) {
         });
         //オプションボタンを作る
         const opts = [];
-        opts.push({label: 'ファイル選択', type: 'text/'});
+        opts.push({label: 'ファイル選択', type: 'html',
+        value: '<form action="imgを受け取るpythonのパスを指定" method="post" enctype="multipart/form-data"><div class="input-group"><label class="input-group-btn"><input type="file" name="file"><button type="submit" class="btn btn default">Submit</button></div></form><input type="file" id="img" name="img" accept="image/png , image/jpeg"><button type="submit">送信する</button>'});
         msg.push({type: 'option', options: opts});
 
         
