@@ -37,13 +37,19 @@ def customvision():
     print(name1, pred1)
     name2, pred2 = analysis["predictions"][1]["tagName"], analysis["predictions"][1]["probability"]
     print(name2, pred2)
-
-
-
+    if(name1=='coach'):
+        name1='ソファー'
+    elif(name1=='bicycle'):
+        name1='自転車'
+    elif(name1=='microwave-oven'):
+        name1='電子レンジ'
+    else:name1='冷蔵庫'
+    return name1
+    
     # Precisionが高いものを返す
-    if(pred1 > pred2):
-        return name1
-    else:return name2
+    # if(pred1 > pred2):
+        
+    # else:return name2
 
 # # (多分使わないと思われる)blobの画像の確認
 # def blobCheckImage(blobPath):

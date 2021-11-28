@@ -25,6 +25,7 @@ app.get('/chat', function (req, res) {
         });
         //オプションボタンを作る
         const opts = [];
+
         opts.push({label: 'ファイル選択', type: 'html',
         value: '<form action="http://127.0.0.1:5000/image" target="_blank" method="post" enctype="multipart/form-data"><div class="input-group"><label class="input-group-btn"><input type="file" name="file"><button type="submit" class="btn btn default">Submit</button></div></form>'});
         msg.push({type: 'option', options: opts});
@@ -40,13 +41,25 @@ app.get('/chat', function (req, res) {
             type: 'image',
             value: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Kaiserpinguinjunges.jpg/800px-Kaiserpinguinjunges.jpg'
         });
+    }else if (userInputText == '自転車') {
+        msg.push({
+            type: 'text',
+            value: '自転車は「粗大ごみ」です。<br>「粗大ごみ」の申し込み方法及び出し方<br> 市役所3R推進課(000-0000-0000)に電話してください',
+            delayMs: 500
+        });
+    }else if (userInputText == 'ソファー') {
+        msg.push({
+            type: 'text',
+            value: 'ソファーは「粗大ごみ」です。<br>「粗大ごみ」の申し込み方法及び出し方<br> 市役所3R推進課(000-0000-0000)に電話してください',
+            delayMs: 500
+        });
     }else if (userInputText == 'ファイル選択') { 
         actionCount = actionCount + 1
     }
     else {
         msg.push({
             type: 'text',
-            value: '「' + userInputText + '」ですね！'
+            value:  userInputText 
         });
     }
 
