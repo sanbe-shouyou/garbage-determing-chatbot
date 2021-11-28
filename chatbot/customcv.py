@@ -29,7 +29,7 @@ def customvision():
         'Content-Type': 'multipart/form-data',
         'Prediction-key': prediction_key
     }
-    response =requests.post(url,data=open("chatbot/garbage.png","rb"),headers=headers)
+    response =requests.post(url,data=open("garbage.png","rb"),headers=headers)
     response.raise_for_status()
 
     analysis = response.json()
