@@ -26,7 +26,7 @@ app.get('/chat', function (req, res) {
         //オプションボタンを作る
         const opts = [];
         opts.push({label: 'ファイル選択', type: 'html',
-        value: '<form action="http://127.0.0.1:5000/image" target="_blank" method="post" enctype="multipart/form-data"><div class="input-group"><label class="input-group-btn"><input type="file" name="file"><button type="submit" class="btn btn default">Submit</button></div></form>'});
+        value: '<form action="http://127.0.0.1:5000/image" target="_blank" method="post" enctype="multipart/form-data"><div class="input-group"><label class="input-group-btn"><input type="file" name="file"><button type="submit" class="btn btn default">送信する</button></div></form>'});
         msg.push({type: 'option', options: opts});
         actionCount = actionCount + 1
         
