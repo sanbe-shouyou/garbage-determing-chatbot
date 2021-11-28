@@ -1,6 +1,7 @@
 import json
 from flask import Flask, request,render_template
 from PIL import Image
+import customcv
 app = Flask(__name__)
 
 @app.route('/image', methods=['GET', 'POST'])
@@ -10,9 +11,10 @@ def image():
         png = f.filename.endswith('.png')
         jpg = f.filename.endswith('.jpg')
         jpeg = f.filename.endswith('.jpeg')
-        if png or jpg:
+        if png or jpg or jpeg:
             f.save('garbage.png')
+            result = customcv.customvision()
         else: return 'png,またはjpg形式の画像を送信してください。'
-    return '画像を保存しました。'
+    return result
 if __name__=='__main__':
     app.run()

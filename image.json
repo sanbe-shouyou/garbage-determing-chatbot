@@ -1,0 +1,3 @@
+{
+    "image" : "<div class='input-group'><label class='input-group-btn'><input type='file' name='file'><button type='submit' class='btn btn default'>送信する</button></div><script>var img = getElementById('img')</script>"
+}
